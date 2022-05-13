@@ -12,4 +12,3 @@
 - Data analysis
 - Visualisation
 - Animation
-.
