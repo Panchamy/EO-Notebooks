@@ -10,12 +10,12 @@ from folium.features import GeoJsonTooltip
 
 data = gpd.read_file('polygon/Utrecht_NoordHolland.SHP', geometry='geometry') #read the geodataFrame
 data = data.to_crs(epsg=4326) # change crs to EPSG:4326
-geodata = data.to_json()
+# geodata = data.to_json()
 basic_map = folium.Map(location=[52.58709632157862, 4.825269960317581], tiles="openstreetmap", zoom_start=9) #create the folium base map
 #Create the choropleth map add it to the base map
 custom_scale = (data['inhabitant'].quantile((0,0.2,0.4,0.6,0.8,1))).tolist() # get 20th percentile values for the Choropleth colormap
 folium.Choropleth(
-            geo_data=geodata,
+            geo_data=data,
             data=data,
             columns=['mzr_name', 'inhabitant'],  #Here we tell folium to get the TAZ name ('mzr_name') and plot population ('inhabitant') metric for each county
             key_on='feature.properties.mzr_name', #Here we grab the geometries boundaries from the geojson file using the key 'mzr_name' 
