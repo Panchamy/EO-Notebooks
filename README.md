@@ -1,7 +1,7 @@
 # Geospatial Visualisation
 
 ## Learning objectives
-All students should be able to 
+Students will
 - Get familiar with different types of geospatial data
 - Use python libraries to load, analyse and visualise geospatial data
 - Use animation to show dynamics within the geospatial data
