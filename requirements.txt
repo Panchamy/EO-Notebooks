@@ -1,4 +1,2 @@
 geopandas
 folium
-streamlit_folium
-geopandas
