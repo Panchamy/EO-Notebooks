@@ -74,9 +74,9 @@ After this calculation for each road it is identified in which province this roa
 is located. This join can be done with the `geopandas.sjoin` function.
 
 After this join for each province the average weighted road flood risk is calculated by 
-grouping by each province polygon and taking the mean weight (code block 23). 
+grouping by each province polygon and taking the mean weight (code block 21). 
 
 This mean weight value is then combined again with the original 
-province dataframe _gdf_bound_ (see code block 24), in order to add the province name column again.
+province dataframe _gdf_bound_ (see code block 23), in order to add the province name column again.
 
 This data is plotted in the same way as question 1.
